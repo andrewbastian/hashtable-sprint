@@ -1,10 +1,15 @@
-def has_negatives(a):
+def has_negatives(nums):
     """
     YOUR CODE HERE
     """
-    # Your code here
-
-    return result
+    num_dict = {}
+    res = []
+    for n in nums:
+        if num_dict.get(abs(n)):
+            res.append(abs(n))
+        else:
+            num_dict[abs(n)] = n
+    return res
 
 
 if __name__ == "__main__":
